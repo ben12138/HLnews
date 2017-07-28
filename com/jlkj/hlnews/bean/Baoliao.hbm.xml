@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+  <class name="com.jlkj.hlnews.bean.Baoliao" table="baoliao">
+        <id name="id" column="id" type="java.lang.Integer">
+            <generator class="native"></generator>
+        </id>
+        <property name="editorid" column="editorid" type="java.lang.Integer"></property>
+        <property name="title" column="title" type="java.lang.String"></property>
+        <property name="content" column="content" type="java.lang.String"></property>
+        <property name="picurl1" column="picurl1" type="java.lang.String"></property>
+        <property name="picurl2" column="picurl2" type="java.lang.String"></property>
+        <property name="picurl3" column="picurl3" type="java.lang.String"></property>
+    </class>
+</hibernate-mapping>

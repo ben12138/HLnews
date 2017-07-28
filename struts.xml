@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+ <!-- 表示处于开发模式 -->
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+	<constant name="struts.objectFactory" value="spring" />
+	<package name="news" namespace="/" extends="struts-default">
+		<action name="LoginAction" class="loginAction" method="login">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="DataAction" class="dataAction" method="getData">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="AddDataAction" class="addDataAction" method="addData">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="UpLoadAction" class="com.jlkj.hlnews.action.UpLoadAction" method="upload">
+			<param name="savePath">/upLoadFiles</param>
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="VerifyAction" class="verifyAction" method="verify">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="FindPasswordAction" class="findPasswordAction" method="findPassword">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="RegisteAction" class="registerAction" method="registe">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="UpdateAction" class="updateAction" method="update">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="DeleteDataAction" class="deleteDataAction" method="delete">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="AddCommentAction" class="addCommentAction" method="add">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="GetCommentsAction" class="getCommentsAction" method="get">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="DeleteCommentAction" class="deleteCommentAction" method="delete">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="EditorNameAction" class="editorNameAction" method="get">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+		<action name="SearchAction" class="searchAction" method="search">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">result</param>
+			</result>
+		</action>
+	</package>
+</struts>
+<!-- END SNIPPET: xworkSample -->
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id="loginDao" class="com.jlkj.hlnews.daoimp.LoginDAOImp"></bean>
+	<bean id="loginAction" class="com.jlkj.hlnews.action.LoginAction"
+		scope="prototype" p:dao-ref="loginDao"></bean>
+		
+	<bean id="commentDao" class="com.jlkj.hlnews.daoimp.CommentDaoImp"/>
+	<bean id="addCommentAction" class="com.jlkj.hlnews.action.AddCommentAction"
+		scope="prototype" p:dao-ref="commentDao"/>
+		
+	<bean id="dataDao" class="com.jlkj.hlnews.daoimp.DataDaoImp"/>
+	<bean id="addDataAction" class="com.jlkj.hlnews.action.AddDataAction"
+		scope="prototype" p:dao-ref="dataDao"/>
+		
+	<bean id="userInfDao" class="com.jlkj.hlnews.daoimp.UserInfDaoImp"/>
+	<bean id="registerAction" class="com.jlkj.hlnews.action.RegisteAction"
+		scope="prototype" p:dao-ref="userInfDao"/>
+		
+	<bean id="dataAction" class="com.jlkj.hlnews.action.DataAction"
+		scope="prototype" p:dao-ref="dataDao"/>
+		
+	<bean id="verifyAction" class="com.jlkj.hlnews.action.VerifyAction"
+		scope="prototype" p:dao-ref="userInfDao"/>
+		
+	<bean id="findPasswordAction" class="com.jlkj.hlnews.action.FindPasswordAction"
+		scope="prototype" p:dao-ref="userInfDao"/>
+		
+	<bean id="updateAction" class="com.jlkj.hlnews.action.UpdateAction"
+		scope="prototype" p:dao-ref="userInfDao"/>
+	
+	<bean id="deleteDataAction" class="com.jlkj.hlnews.action.DeleteDataAction"
+		scope="prototype" p:dao-ref="dataDao"/>
+		
+	<bean id="getCommentsAction" class="com.jlkj.hlnews.action.GetCommentsAction"
+		scope="prototype" p:dao-ref="commentDao"/>
+		
+	<bean id="deleteCommentAction" class="com.jlkj.hlnews.action.DeleteCommentAction"
+		scope="prototype" p:dao-ref="commentDao"/>
+		
+	<bean id="editorNameAction" class="com.jlkj.hlnews.action.EditorNameAction"
+		scope="prototype" p:dao-ref="userInfDao"/>
+		
+	<bean id="searchAction" class="com.jlkj.hlnews.action.SearchAction"
+		scope="prototype" p:dao-ref="dataDao"/>
+
+</beans>
